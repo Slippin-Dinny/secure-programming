@@ -1,0 +1,20 @@
+-- Insert users
+INSERT INTO users (username, email, password_hash, mfa_secret)
+VALUES 
+('alice', 'alice@example.com', '$2y$10$123456789012345678901uVhDeK9G7oKJ9sKz1i2jKk1x1WqOhi0W', 'SECRET1'),
+('bob', 'bob@example.com', '$2y$10$123456789012345678901uVhDeK9G7oKJ9sKz1i2jKk1x1WqOhi0W', 'SECRET2');
+
+-- Insert accounts
+INSERT INTO accounts (user_id, account_type, balance)
+VALUES 
+(1, 'checking', 500.00),
+(1, 'savings', 1000.00),
+(2, 'checking', 200.00);
+
+-- Insert transactions
+INSERT INTO transactions (account_id, type, amount, description)
+VALUES 
+(1, 'deposit', 100.00, 'Initial deposit'),
+(1, 'withdrawal', 50.00, 'ATM withdrawal'),
+(2, 'deposit', 200.00, 'Paycheck deposit'),
+(3, 'withdrawal', 30.00, 'Grocery shopping');
