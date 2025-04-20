@@ -42,7 +42,7 @@ CREATE TABLE mfa_tokens (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
--- Login attempts (optional for brute force protection)
+-- Login attempts
 CREATE TABLE login_attempts (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT,
