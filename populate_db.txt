@@ -1,15 +1,15 @@
--- Insert users
-INSERT INTO users (account_num, first_name, last_name, email, password_hash, mfa_secret)
+-- Insert users 
+INSERT INTO users (first_name, last_name, email, password_hash, mfa_secret)
 VALUES 
-('62012345', 'alice', 'jones', 'alice@example.com', '$2y$10$123456789012345678901uVhDeK9G7oKJ9sKz1i2jKk1x1WqOhi0W', 'SECRET1'),
-('90890812', 'bob'. 'bobby', 'bob@example.com', '$2y$10$123456789012345678901uVhDeK9G7oKJ9sKz1i2jKk1x1WqOhi0W', 'SECRET2');
+('Alice', 'Johnson', 'alice@example.com', '$2y$10$123456789012345678901uVhDeK9G7oKJ9sKz1i2jKk1x1WqOhi0W', 'SECRET1'),
+('Bob', 'Smith', 'bob@example.com', '$2y$10$123456789012345678901uVhDeK9G7oKJ9sKz1i2jKk1x1WqOhi0W', 'SECRET2');
 
--- Insert accounts
-INSERT INTO accounts (user_id, account_type, balance)
+-- Insert accounts with unique 8-digit account numbers
+INSERT INTO accounts (user_id, account_number, account_type, balance)
 VALUES 
-(1, 'checking', 500.00),
-(1, 'savings', 1000.00),
-(2, 'checking', 200.00);
+(1, '90890812', 'checking', 500.00),
+(1, '65012345', 'savings', 1000.00),
+(2, '99854123', 'checking', 200.00);
 
 -- Insert transactions
 INSERT INTO transactions (account_id, type, amount, description)
