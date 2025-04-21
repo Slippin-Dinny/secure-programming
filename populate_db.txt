@@ -1,8 +1,8 @@
 -- Insert users
-INSERT INTO users (first_name, last_name, email, password_hash, mfa_secret)
+INSERT INTO users (account_num, first_name, last_name, email, password_hash, mfa_secret)
 VALUES 
-('alice', 'jones', 'alice@example.com', '$2y$10$123456789012345678901uVhDeK9G7oKJ9sKz1i2jKk1x1WqOhi0W', 'SECRET1'),
-('bob'. 'bobby', 'bob@example.com', '$2y$10$123456789012345678901uVhDeK9G7oKJ9sKz1i2jKk1x1WqOhi0W', 'SECRET2');
+('62012345', 'alice', 'jones', 'alice@example.com', '$2y$10$123456789012345678901uVhDeK9G7oKJ9sKz1i2jKk1x1WqOhi0W', 'SECRET1'),
+('90890812', 'bob'. 'bobby', 'bob@example.com', '$2y$10$123456789012345678901uVhDeK9G7oKJ9sKz1i2jKk1x1WqOhi0W', 'SECRET2');
 
 -- Insert accounts
 INSERT INTO accounts (user_id, account_type, balance)
