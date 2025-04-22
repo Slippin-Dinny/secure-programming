@@ -1,19 +1,18 @@
 CREATE DATABASE IF NOT EXISTS secure_banking;
 USE secure_banking;
 
--- Users table (first name & last name instead of username)
+-- Users table 
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
     password_hash VARCHAR(255) NOT NULL,
-    mfa_secret VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     last_login TIMESTAMP NULL
 );
 
--- Accounts table (with unique 8-digit account number)
+-- Accounts table 
 CREATE TABLE accounts (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
