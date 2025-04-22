@@ -1,8 +1,8 @@
 -- Insert users 
-INSERT INTO users (first_name, last_name, email, password_hash, mfa_secret)
+INSERT INTO users (first_name, last_name, email, password_hash)
 VALUES 
-('Alice', 'Johnson', 'alice@example.com', '$2y$10$123456789012345678901uVhDeK9G7oKJ9sKz1i2jKk1x1WqOhi0W', 'SECRET1'),
-('Bob', 'Smith', 'bob@example.com', '$2y$10$123456789012345678901uVhDeK9G7oKJ9sKz1i2jKk1x1WqOhi0W', 'SECRET2');
+('Alice', 'Johnson', 'alice@example.com', '$2y$10$123456789012345678901uVhDeK9G7oKJ9sKz1i2jKk1x1WqOhi0W'),
+('Bob', 'Smith', 'bob@example.com', '$2y$10$123456789012345678901uVhDeK9G7oKJ9sKz1i2jKk1x1WqOhi0W');
 
 -- Insert accounts with unique 8-digit account numbers
 INSERT INTO accounts (user_id, account_number, account_type, balance)
